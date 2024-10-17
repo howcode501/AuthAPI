@@ -11,4 +11,8 @@ if($state == "login")
     {
         return json_encode(["state" => "validate"]);
     }
+    // $DB = "connect the Database";
+
+    $DB->insert("INSERT INTO users FROM name = $UserName, password = $UserPassword");
+    
 }

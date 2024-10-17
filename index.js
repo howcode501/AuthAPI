@@ -26,7 +26,7 @@ var Auth = function () {
                 $.Ajax("/auth/login", {
                     name:RegisterName,
                     password:RegisterPassword
-                } (res) => {
+                }, (res) => {
                     let response = JSON.parse(res);
                     if(response == "")
                     {

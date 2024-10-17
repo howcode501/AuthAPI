@@ -23,7 +23,16 @@ var Auth = function () {
                 let ReigsterName = $("#RegisterInput").val();
                 let RegisterPassword = $("#RegisterPassword").val();
 
-                
+                $.Ajax("/auth/login", {
+                    name:RegisterName,
+                    password:RegisterPassword
+                } (res) => {
+                    let response = JSON.parse(res);
+                    if(response == "")
+                    {
+                        alert("validation process");
+                    }
+                })
             })
         }
     })  
